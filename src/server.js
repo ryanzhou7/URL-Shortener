@@ -14,6 +14,7 @@ app.use(urlencoded({ extended: true }));
 
 app.get('/health', (req, res) => res.status(200).send('Healthy'));
 
+/*
 app.get('/urls', async (req, res) => {
   try {
     const allUrls = await Url.find({}).lean().exec();
@@ -79,3 +80,4 @@ function start() {
 }
 
 module.exports = start;
+*/
