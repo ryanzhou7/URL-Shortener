@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const connect = (opts = {}) => {
-  const url = `mongodb://localhost:27017/url-shortener`;
+  const url = process.env.MONGODB_URL;
   mongoose.connect(url);
   mongoose.connection.once('open', () => {
     console.log('Connected to db');
