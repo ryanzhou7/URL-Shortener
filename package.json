@@ -7,9 +7,6 @@
     "start": "node index.js",
     "dev": "nodemon --watch src index.js"
   },
-  "engines": {
-    "node": "13.x"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sophie-tsai/url-shortener.git"

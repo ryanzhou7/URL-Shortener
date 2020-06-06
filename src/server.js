@@ -64,6 +64,7 @@ app.post('/urls', async (req, res) => {
     res.status(500).send();
   }
 });
+*/
 
 function start() {
   const PORT = process.env.PORT || 5000;
@@ -80,4 +81,3 @@ function start() {
 }
 
 module.exports = start;
-*/
