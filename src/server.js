@@ -14,7 +14,6 @@ app.use(urlencoded({ extended: true }));
 
 app.get('/health', (req, res) => res.status(200).send('Healthy'));
 
-/*
 app.get('/urls', async (req, res) => {
   try {
     const allUrls = await Url.find({}).lean().exec();
@@ -64,23 +63,12 @@ app.post('/urls', async (req, res) => {
     res.status(500).send();
   }
 });
-*/
 
 function start() {
   const PORT = process.env.PORT || 5000;
 
   try {
     connect();
-
-    const MongoClient = require('mongodb').MongoClient;
-    const uri =
-      'mongodb+srv://<username>:<password>@sandbox-2hy2v.mongodb.net/<dbname>?retryWrites=true&w=majority';
-    const client = new MongoClient(uri, { useNewUrlParser: true });
-    client.connect((err) => {
-      const collection = client.db('test').collection('devices');
-      // perform actions on the collection object
-      client.close();
-    });
 
     app.listen(PORT, () => {
       console.log(`REST API on http://localhost:${PORT}/api`);
